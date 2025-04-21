@@ -5,16 +5,34 @@
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
 
-html,
 body {
-  width: 100dvw;
-  overflow-x: hidden;
-  background-color: black;
-  color: white;
-  scroll-behavior: smooth;
-  font-family: "Mona Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; Take full screen height */
+  font-family: 'Mona Sans', sans-serif;
+  background: var(--gradient);
+  color: #333;
 }
 
-section {
-  width: 100vw;
+.container {
+  width: 550px;
 }
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+/* @utility {
+  .w-70 {
+    width: 70%;
+  }
+} */
