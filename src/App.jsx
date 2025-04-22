@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from './components/Hero/Hero'
+// import Hero from './components/Hero/Hero'
 // import NavBar from './components/NavBar/NavBar'
 // import About from './components/About/About'
 // import Footer from './components/Footer/Footer'
@@ -8,17 +8,9 @@ import Hero from './components/Hero/Hero'
 
 const App = () => {
   return (
-    <div>
-      {/* <NavBar /> */}
-      <div className='container'>
-
-      <Hero />
-      </div>
-      {/* <About /> */}
-      {/* <Projects /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
-    </div>
+    <main className=''>
+        
+    </main>
   )
 }
 
