@@ -28,7 +28,7 @@ const Hero = () => {
 
       <div className='hero-layout'>
         {/* left content */}
-        <header className='flex flex-col justify-center md:w-full w-screen md:px-20 px-5'>
+        <header className='flex flex-col justify-center justify-self-center md:w-full w-screen md:px-20 px-5'>
           <div className='flex flex-col gap-7'>
             <div className='hero-text'>
               <h1>Shaping
@@ -52,11 +52,11 @@ const Hero = () => {
 
         </header>
         {/* 3d model */}
-        <figure>
+        {/* <figure>
              <div className= 'hero-3d-layout'> 
               <HeroExperience/>
               </div>       
-        </figure>
+        </figure> */}
 
       </div>
 
