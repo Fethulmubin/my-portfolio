@@ -81,6 +81,23 @@ const Project = () => {
         "source": "Link not specified"
       },
       "ref": projectRef_2
+    },
+    {
+      "title": "UP-Start Studio",
+      "date": "October 2024",
+      "description": "Designed and built a landing page for Upstart studio --- landing page link",
+      "technologies": [
+        "Next.js",
+        "Typescript",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Magic UI"
+      ],
+      "links": {
+        "website": "Link not specified",
+        "source": "Link not specified"
+      },
+      "ref": projectRef_2
     }
   ]
   
