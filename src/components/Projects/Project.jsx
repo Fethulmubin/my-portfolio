@@ -82,23 +82,6 @@ const Project = () => {
       },
       "ref": projectRef_2
     },
-    {
-      "title": "UP-Start Studio",
-      "date": "October 2024",
-      "description": "Designed and built a landing page for Upstart studio --- landing page link",
-      "technologies": [
-        "Next.js",
-        "Typescript",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI"
-      ],
-      "links": {
-        "website": "Link not specified",
-        "source": "Link not specified"
-      },
-      "ref": projectRef_2
-    }
   ]
   
   return (
@@ -112,7 +95,7 @@ const Project = () => {
               {
                 projects.map((project, index) =>(
                   <div key={index} ref={project.ref} className='border-2 border-white/50 rounded-2xl '>
-                    {project?.img ? <img src={project.img} alt={project.title}/> : <div className='w-full rounded-t-2xl h-[200px] flex justify-center items-center bg-white-50'>image</div> }
+                    {project?.img ? <img src={project.img} alt={project.title}/> : <div className='w-full rounded-t-2xl h-[250px] flex justify-center items-center bg-white-50'>image</div> }
                     <div className='px-4'>
                     <h3 className='my-2 text-2xl font-bold'>{project.title}</h3>
                     <p className='mb-1 text-[10px] md:text-[16px]'>{project.date}</p>
