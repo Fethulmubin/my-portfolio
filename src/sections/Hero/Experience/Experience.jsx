@@ -5,75 +5,99 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Experience = () => {
-    useGSAP(()=>{
-        gsap.to(".timeline", {
-            // Set the origin of the animation to the bottom of the timeline
-            transformOrigin: "bottom bottom",
-            // Animate the timeline height over 1 second
-            ease: "power1.inOut",
-            // Trigger the animation when the timeline is at the top of the screen
-            // and end it when the timeline is at 70% down the screen
+    const containerRef = React.useRef(null);
+
+    useGSAP(() => {
+        // Timeline line animation
+        gsap.from(".timeline-line", {
+            scaleY: 0,
+            duration: 1.5,
+            ease: "power3.out",
             scrollTrigger: {
-              trigger: ".timeline",
-              start: "top center",
-              end: "70% center",
-              // Update the animation as the user scrolls
-              onUpdate: (self) => {
-                // Scale the timeline height as the user scrolls
-                // from 1 to 0 as the user scrolls up the screen
-                gsap.to(".timeline", {
-                  scaleY: 1 - self.progress,
-                });
-              },
-            },
-          });
-      
-    },[])
-    gsap.utils.toArray('.timeline-card').forEach((card)=>{
-        gsap.from(card, {
-            xPercent: -100,
-            opacity: 0
-        })
-    })
+                trigger: containerRef.current,
+                start: "top 70%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        // Card animations
+        gsap.utils.toArray(".exp-card").forEach((card, i) => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                delay: i * 0.15,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            });
+        });
+
+        // Dot animations
+        gsap.from(".timeline-dot", {
+            scale: 0,
+            duration: 0.6,
+            stagger: 0.15,
+            ease: "back.out(1.7)",
+            scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top 70%",
+                toggleActions: "play none none none"
+            }
+        });
+
+    }, { scope: containerRef });
+
     return (
-        <section className='w-full mt-20 md:mt-40 section-padding xl:px-0' id='exper'>
-            <div className='w-full h-full md:px-20 px-5'>
+        <section className='w-full mt-20 md:mt-40 section-padding xl:px-0' id='exper' ref={containerRef}>
+            <div className='w-full h-full md:px-20 px-5 max-w-7xl mx-auto'>
                 <TitleHeader title="My Coding journey" sub="My journey overview 💻" />
+                
                 <div className='mt-32 relative'>
-                    <div className='relative z-50 xl:space-y-32 space-y-10'>
-                        {expCards.map((card) => (
-                            // <div key={card.title} className='exp-card-wrapper'>
-                            //     {card.title}
-                                <div className='expText flex xl:gap-20 md:gap-10 gap-5 relative z-20'>
-                                    <div className="timeline" />
-                                    <div className='timeline-logo'>
-                                        <img src={card.logoPath} alt="" />
-                                    </div>
-                                    <div>
-                                    <h1 className='font-semibold text-3xl '>{card.title}</h1>
-                                    <p className='my-5 text-white-50'>{card.date}</p>
-                                    <p className='text-[#839cb5]'> Responsibilities </p>
-                                    <ul className='list-disc ms-5 mt-5 flex flex-col gap-5'>
-                                        {card.responsibilities.map((item, index) => (
-                                            <li className='' key={index}>{item}</li>
-                                        ))}
-                                    </ul>
+                    {/* Vertical Timeline Line - aligned with logos */}
+                    {/* <div className="timeline-line absolute left-[calc(25%-5px)] md:left-[calc(25%-10px)] lg:left-[calc(25%-15px)] top-0 bottom-0 w-0.5 bg-gray-300"></div> */}
+                    
+                    <div className='relative z-50 space-y-32'>
+                        {expCards.map((card, index) => (
+                            <div 
+                                key={index} 
+                                className="exp-card flex items-start gap-8 relative"
+                            >
+                                {/* Left column for logo and timeline dot */}
+                                <div className="w-1/4 flex justify-end relative">
+                                    <div className="timeline-dot absolute top-6 right-[-8px] w-4 h-4 rounded-full bg-blue-500 border-4 border-white z-10"></div>
+                                    <div className="w-24 h-24 flex-shrink-0 rounded-full bg-white/5 backdrop-blur-sm flex items-center justify-center p-2">
+                                        <img 
+                                            src={card.logoPath} 
+                                            alt={card.title} 
+                                            className="w-16 h-16 object-contain" 
+                                        />
                                     </div>
                                 </div>
-                            // </div>
-
+                                
+                                {/* Right column for content */}
+                                <div className="w-3/4">
+                                    <h1 className='font-semibold text-3xl'>{card.title}</h1>
+                                    <p className='my-3 text-white/70'>{card.date}</p>
+                                    <p className='text-blue-400'>Responsibilities</p>
+                                    <ul className='mt-4 flex flex-col gap-2'>
+                                        {card.responsibilities.map((item, i) => (
+                                            <li key={i} className="bg-white/5 px-4 py-2 rounded-lg backdrop-blur-sm">
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
                         ))}
-
-
-
                     </div>
-
                 </div>
             </div>
-
         </section>
     )
 }

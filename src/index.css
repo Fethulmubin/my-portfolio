@@ -239,11 +239,11 @@ section {
   }
 
   .timeline-wrapper {
-    @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
+    @apply absolute top-0 xl:left-[405px] md:left-[203px] left-[100px] h-[380px] ;
   }
 
   .timeline {
-    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
+    @apply absolute z-30 h-[110%] top-10 w-14 md:w-28 bg-black;
   }
 
   .timeline-logo {
