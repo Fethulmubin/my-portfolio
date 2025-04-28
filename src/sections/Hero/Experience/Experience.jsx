@@ -1,6 +1,6 @@
 import React from 'react'
 import TitleHeader from '../../../components/TitleHeader'
-import { expCards } from '../../../constants/index.jsx'
+import { expCards } from '../../../assets/constants'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { words } from '../../constants/index.jsx'
+import { words } from '../../assets/constants'
 import Button from '../../components/Button'
 import {useGSAP} from '@gsap/react'
 import gsap from 'gsap'
