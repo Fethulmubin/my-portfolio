@@ -85,7 +85,7 @@ const Project = () => {
   ]
   
   return (
-    <section ref={projectSecRef} className='pb-15 px-[40px] lg:px-[300px]'>
+    <section ref={projectSecRef} className='pb-15 px-[40px] lg:px-[300px] my-20'>
         <div className='flex flex-col items-center'>
             <span className='px-4 py-2 bg-white-50 text-black-200 rounded-xl text-2xl font-bold'>My Projects</span>
             <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold mt-4'>Check Out My Latest Projects</h2>

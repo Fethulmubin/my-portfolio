@@ -3,6 +3,7 @@ import { words } from '../../assets/constants'
 import Button from '../../components/Button'
 import {useGSAP} from '@gsap/react'
 import gsap from 'gsap'
+import Bulb from '../../components/Bulb'
 import HeroExperience from '../../components/HeroModels/HeroExperience'
 
 const Hero = () => {
@@ -22,10 +23,6 @@ const Hero = () => {
 
   return (
     <section id='hero' className='relative overflow-hidden'>
-      <div className='absolute top-0 left-0 z-10'>
-        <img src="" alt="" /> 
-      </div>
-
       <div className='hero-layout'>
         {/* left content */}
         <header className='flex flex-col justify-center justify-self-center md:w-full w-screen md:px-20 px-5'>
@@ -52,11 +49,12 @@ const Hero = () => {
 
         </header>
         {/* 3d model */}
-        {/* <figure>
+        <figure>
              <div className= 'hero-3d-layout'> 
-              <HeroExperience/>
+              {/* <HeroExperience/> */}
+              <Bulb/>
               </div>       
-        </figure> */}
+        </figure>
 
       </div>
 
