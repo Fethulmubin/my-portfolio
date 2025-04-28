@@ -1,6 +1,6 @@
 import React from 'react'
 import TitleHeader from '../../../components/TitleHeader'
-import { expCards } from '../../../constants'
+import { expCards } from '../../../constants/index.jsx'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -59,9 +59,7 @@ const Experience = () => {
                 <TitleHeader title="My Coding journey" sub="My journey overview 💻" />
                 
                 <div className='mt-32 relative'>
-                    {/* Vertical Timeline Line - aligned with logos */}
-                    {/* <div className="timeline-line absolute left-[calc(25%-5px)] md:left-[calc(25%-10px)] lg:left-[calc(25%-15px)] top-0 bottom-0 w-0.5 bg-gray-300"></div> */}
-                    
+
                     <div className='relative z-50 space-y-32'>
                         {expCards.map((card, index) => (
                             <div 
