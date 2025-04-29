@@ -5,13 +5,13 @@ import TitleHeader from './TitleHeader';
 const Contact = () => {
     return (
         <div id="contact" className="w-full flex flex-col items-center mt-20 md:mt-40 section-padding xl:px-0">
-            <div className="w-full max-w-4xl px-5 md:px-10">
+            <div className="w-full max-w-4xl px-2 md:px-10">
                 <TitleHeader
                     title="Get in Touch – Let’s Connect"
                     sub="💬 Have questions or ideas? Let’s talk! 🚀"
                 />
                 <div className="mt-16 flex justify-center">
-                    <div className="w-full md:w-2/3 bg-white/10 backdrop-blur-lg border border-white/30 shadow-lg rounded-2xl p-10">
+                    <div className="w-full md:w-2/3 bg-white/10 backdrop-blur-lg border border-white/30 shadow-lg rounded-2xl p-5">
                         <form
                             onSubmit=""
                             className="w-full flex flex-col gap-7"

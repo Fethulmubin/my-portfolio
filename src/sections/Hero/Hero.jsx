@@ -43,13 +43,13 @@ const Hero = () => {
               <h1>in to Real Projects</h1>
               <h1>that deliver results</h1>
             </div>
-            <p className='text-white-50 md:text-3xl text-xl font-bold relative flex-wrap z-10'>Hi, I'm Fethulmubin a passionate MERN-Stack developer based in Ethiopia  </p>
+            <p className='text-white-50 md:text-3xl text-xl font-bold relative flex-wrap md:w-120 z-10'>Hi, I'm Fethulmubin a passionate MERN-Stack developer based in Ethiopia  </p>
             <Button className='md:w-80 md:h-16 w-60 h-12' id='button' text='See my Work'/>
           </div>
 
         </header>
         {/* 3d model */}
-        <figure>
+        <figure className='hidden md:block'>
              <div className= 'hero-3d-layout'> 
               {/* <HeroExperience/> */}
               <Bulb/>

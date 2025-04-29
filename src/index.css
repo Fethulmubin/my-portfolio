@@ -81,7 +81,7 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+    @apply relative z-10 xl:mt-20 mt-14 md:h-dvh h-[80vh] flex xl:items-center justify-center;
   }
 
   .hero-text {
@@ -99,7 +99,7 @@ section {
   }
 
   .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-0 xl:-right-20 right-0;
+    @apply hidden md:block xl:w-[70%]  md:absolute xl:-top-20 xl:-right-20;
   }
 
   .navbar {

@@ -55,16 +55,16 @@ const Experience = () => {
 
     return (
         <section className='w-full mt-20 md:mt-40 section-padding xl:px-0' id='exper' ref={containerRef}>
-            <div className='w-full h-full md:px-20 px-5 max-w-7xl mx-auto'>
+            <div className='w-full h-full md:px-20 max-w-7xl mx-auto'>
                 <TitleHeader title="My Coding journey" sub="My journey overview 💻" />
                 
-                <div className='mt-32 relative'>
+                <div className='mt-10 relative'>
 
-                    <div className='relative z-50 space-y-32'>
+                    <div className='relative z-50 space-y-10'>
                         {expCards.map((card, index) => (
                             <div 
                                 key={index} 
-                                className="exp-card flex items-start gap-8 relative"
+                                className="exp-card flex flex-col items-center md:flex-row md:items-start gap-8 relative"
                             >
                                 {/* Left column for logo and timeline dot */}
                                 <div className="w-1/4 flex justify-end relative">
@@ -79,13 +79,13 @@ const Experience = () => {
                                 </div>
                                 
                                 {/* Right column for content */}
-                                <div className="w-3/4">
+                                <div className="w-full px-2">
                                     <h1 className='font-semibold text-3xl'>{card.title}</h1>
                                     <p className='my-3 text-white/70'>{card.date}</p>
                                     <p className='text-blue-400'>Responsibilities</p>
                                     <ul className='mt-4 flex flex-col gap-2'>
                                         {card.responsibilities.map((item, i) => (
-                                            <li key={i} className="bg-white/5 px-4 py-2 rounded-lg backdrop-blur-sm">
+                                            <li key={i} className="bg-white/5 px-4 text-[15px] md:text-[20px]  py-2 rounded-lg backdrop-blur-sm">
                                                 {item}
                                             </li>
                                         ))}
