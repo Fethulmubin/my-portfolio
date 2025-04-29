@@ -4,17 +4,23 @@ const NavBar = () => {
   return (
     <header className='navbar'>
         <div className='inner'>
-            <a className='logo' href="#hero">
-                FethulMubin | Kedir
+            <a className='logo flex' href="#hero">
+                <p className='logo'>Fethulmubin</p>
+                <p className='logo hidden md:block'>Kedir</p>
             </a>
 
             <nav className='desktop'>
-
+                <ul className='flex text-2xl font-semibold gap-10'>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
 
             <a href="#contact" className='contact-btn group'>
-                <div className='inner'>
-                    <span>Contact me</span>
+                <div className='inner font-semibold '>
+                    <span className='md:py-1'>Contact me</span>
                 </div>
             </a>
         </div>

@@ -25,6 +25,7 @@ const techStack = () => {
                     {logoIconsList.map((icon, index) => (
                         <LogoIcon key={index} icon={icon} />
                     ))}
+                    
                 </div>
             </div>
         </div>

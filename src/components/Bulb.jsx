@@ -26,7 +26,7 @@ export default function Bulb() {
             {/* String (Wire) */}
             <div
                 onClick={handleToggle}
-                className={`relative md:mb-10 mb-80 w-1 h-52 bg-gray-400 cursor-pointer hover:bg-gray-200 mt-2`}
+                className={`relative md:mb-10 mb-60 w-1 h-52 bg-gray-400 cursor-pointer hover:bg-gray-200 mt-2`}
             >
                 <div className={`absolute top-52 w-4 -right-[6px] bg-white-50 h-10 rounded-full`}>
                 </div>
