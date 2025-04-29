@@ -99,7 +99,7 @@ section {
   }
 
   .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-60 xl:-right-20 right-0;
+    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-0 xl:-right-20 right-0;
   }
 
   .navbar {
@@ -407,7 +407,7 @@ section {
   height: 100%;
   position: absolute;
   overflow: hidden;
-  animation: marquee 60s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 .marquee-item {
   float: left;
