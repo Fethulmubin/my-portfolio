@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { div } from 'three/tsl'
 import { FaGithub, FaGlobe } from 'react-icons/fa'
+import netflix from '/public/images/netflix.png'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -54,6 +55,7 @@ const Project = () => {
     {
       "title": "Tomato",
       "date": "March 25 2025",
+      "imagePath": "/public/images/tomn.png",
       "description": "Tomato is an open-source food ordering platform that allows users to browse food items, place orders, and make payments. It features an admin dashboard where administrators can track orders and manage products in real-time. ",
       "technologies": [
         "React",
@@ -63,14 +65,15 @@ const Project = () => {
         "Nodejs",
       ],
       "links": {
-        "website": "Link not specified",
-        "source": "Link not specified"
+        "website": "https://food-delivery-b8hs.onrender.com",
+        "source": "https://github.com/Fethulmubin/Food_delivery"
       },
       "ref": projectRef_1
     },
     {
       "title": "Memories",
       "date": "April 2024",
+      "imagePath": "/public/images/Mem-pc.png",
       "description": "Memories is small social media application that allows users to share their memories with friends and family. It features a user-friendly interface.",
       "technologies": [
         "React",
@@ -82,13 +85,14 @@ const Project = () => {
         "Redux",
       ],
       "links": {
-        "website": "Link not specified",
-        "source": "Link not specified"
+        "website": "https://memories-lb7c.onrender.com",
+        "source": "https://github.com/Fethulmubin/Memories"
       },
       "ref": projectRef_2
     },
     {
       "title": "HKT-coffee-export",
+      "imagePath": "/public/images/buna.png",
       "date": "Dec 2024",
       "description": "HKT-coffee-export was for my private client which is a responsive front-end react project allows users to browse and contact with the seller.",
       "technologies": [
@@ -97,13 +101,14 @@ const Project = () => {
         "CSS"
       ],
       "links": {
-        "website": "Link not specified",
-        "source": "Link not specified"
+        "website": "https://hktcoffee-export.com/",
+        "source": "https://github.com/Fethulmubin/Hunde_Coffee"
       },
       "ref": projectRef_3
     },
     {
       "title": "Amazon-clone",
+      "imagePath": "/public/images/amazon.png",
       "date": "Dec 2023",
       "description": "Amazon-clone is a clone of the popular e-commerce platform Amazon. It features a user-friendly, a shopping cart system, and a payment through Stripe.",
       "technologies": [
@@ -113,13 +118,14 @@ const Project = () => {
         "Redux",
       ],
       "links": {
-        "website": "Link not specified",
-        "source": "Link not specified"
+        "website": "https://amazonfethul.netlify.app/",
+        "source": "https://github.com/Fethulmubin/amazon-clone-last"
       },
       "ref": projectRef_4
     },
     {
       "title": "Netflix-clone",
+      "imagePath": "/public/images/netflix.png",
       "date": "Oct 2023",
       "description": "Netflix-clone is a clone of the popular streaming platform Netflix. It features a user-friendly interface, a movie browsing system, and live trailer feature",
       "technologies": [
@@ -128,13 +134,14 @@ const Project = () => {
         "TMDB Api",
       ],
       "links": {
-        "website": "Link not specified",
-        "source": "Link not specified"
+        "website": "https://fethulmubin.github.io/Netflix-Clone/",
+        "source": "https://github.com/Fethulmubin/Netflix-Clone"
       },
       "ref": projectRef_5
     },
     {
       "title": "Evangadi-forum",
+      "imagePath": "/public/images/evangadi.png",
       "date": "April 2024",
       "description": "My final project in EVANGAD's 6-month MERN-stack development course. this is EVANGADI's forum which make students ask and answer question tech related topics. ",
       "technologies": [
@@ -146,8 +153,8 @@ const Project = () => {
         "CSS",
       ],
       "links": {
-        "website": "Link not specified",
-        "source": "Link not specified"
+        "website": "https://evanfadiforumfethulmubin.netlify.app/",
+        "source": "https://github.com/Fethulmubin/Final_project"
       },
       "ref": projectRef_6
     },
@@ -165,7 +172,7 @@ const Project = () => {
           {
             projects.map((project, index) => (
               <div key={index} ref={project.ref} className='border-2 border-white/50 rounded-2xl '>
-                {project?.img ? <img src={project.img} alt={project.title} /> : <div className='w-full rounded-t-2xl h-[250px] flex justify-center items-center bg-white-50'>image</div>}
+                {project?.imagePath ? <img className='w-full h-[350px] object-contain' src={project.imagePath} alt={project.title} /> : <div className='w-full rounded-t-2xl h-[250px] flex justify-center items-center bg-white-50'>image</div>}
                 <div className='px-4 flex flex-col '>
                   <h3 className='my-2 text-2xl font-bold'>{project.title}</h3>
                   <p className='mb-1 text-[10px] md:text-[16px]'>{project.date}</p>
