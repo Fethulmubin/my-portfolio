@@ -2,6 +2,10 @@ import React, { useRef } from 'react';
 import { FaGithub, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import TitleHeader from './TitleHeader';
 import emailjs from '@emailjs/browser'
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { toast } from 'react-toastify';
+
 
 const Contact = () => {
 
@@ -14,15 +18,19 @@ const Contact = () => {
           })
           .then(
             () => {
-              console.log('SUCCESS!');
+            //   console.log('SUCCESS!');
+              toast.success('Message sent successfully!')
+              form.current.reset()  
             },
             (error) => {
-              console.log('FAILED...', error);
+            //   console.log('FAILED...', error);
+            toast.error('Message failed to send!')
             },
           );
       };
     return (
         <div id="contact" className="w-full flex flex-col items-center mt-20 md:mt-40 section-padding xl:px-0">
+            <ToastContainer position='top-center' autoClose={3000}/>
             <div className="w-full max-w-4xl px-2 md:px-10">
                 <TitleHeader
                     title="Get in Touch – Let’s Connect"
