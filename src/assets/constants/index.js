@@ -177,6 +177,7 @@ const expCards = [
     responsibilities: [
      
       "☕ HKT Coffee Export – Dec 2024, A client project: responsive front-end built to display and contact coffee exporters",
+      "🚀 NASA 2024 Hackathon Oct 2024, 9th place, A small project: a responsive front-end built to display NASA's latest news, some planets 3d images for learning.",
     ],
   },
 ];

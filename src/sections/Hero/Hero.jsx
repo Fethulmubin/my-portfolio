@@ -4,7 +4,7 @@ import Button from '../../components/Button'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Bulb from '../../components/Bulb'
-import HeroExperience from '../../components/HeroModels/HeroExperience'
+
 
 const Hero = () => {
   useGSAP(() => {
