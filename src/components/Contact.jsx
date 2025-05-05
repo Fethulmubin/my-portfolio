@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaGithub, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import TitleHeader from './TitleHeader';
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+
+    const form = useRef()
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs
+          .sendForm('service_jom73yw', 'service_jom73yw', form.current, {
+            publicKey: 'GnxDm1GPkTI3B4KNd',
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+            },
+            (error) => {
+              console.log('FAILED...', error);
+            },
+          );
+      };
     return (
         <div id="contact" className="w-full flex flex-col items-center mt-20 md:mt-40 section-padding xl:px-0">
             <div className="w-full max-w-4xl px-2 md:px-10">
@@ -13,7 +31,8 @@ const Contact = () => {
                 <div className="mt-16 flex justify-center">
                     <div className="w-full md:w-2/3 bg-white/10 backdrop-blur-lg border border-white/30 shadow-lg rounded-2xl p-5">
                         <form
-                            onSubmit=""
+                            ref={form}
+                            onSubmit={sendEmail}
                             className="w-full flex flex-col gap-7"
                         >
                             <div>
@@ -22,8 +41,6 @@ const Contact = () => {
                                     type="text"
                                     id="name"
                                     name="name"
-                                    value=""
-                                    onChange=""
                                     placeholder="What’s your good name?"
                                     required
                                     className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/60 focus:outline-none"
@@ -36,8 +53,6 @@ const Contact = () => {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    value=""
-                                    onChange=""
                                     placeholder="What’s your email address?"
                                     required
                                     className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/60 focus:outline-none"
@@ -49,8 +64,6 @@ const Contact = () => {
                                 <textarea
                                     id="message"
                                     name="message"
-                                    value=""
-                                    onChange=""
                                     placeholder="How can I help you?"
                                     rows="5"
                                     required

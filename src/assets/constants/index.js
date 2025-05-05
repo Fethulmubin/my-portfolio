@@ -146,7 +146,7 @@ const expCards = [
   {
     review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
     imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
+    logoPath: "/images/evan_circ.png",
     title: "🎓 MERN Stack Training – EVANGADI",
     date: "Aug 2023 - Feb 2024",
     responsibilities: [
@@ -158,23 +158,24 @@ const expCards = [
   {
     review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
     imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
+    logoPath: "/images/self_circ.png",
     title: " Project-Based Learning & Skill Building",
     date: "Oct 2023 – Present",
     responsibilities: [
       "🎬 Netflix Clone – Oct 2023, A Netflix UI replica with movie browsing and live trailers using TMDB API.",
       "🛒 Amazon Clone – Dec 2023, E-commerce clone with shopping cart and Stripe payment integration.",
-      "📷 Memories App – April 2024, A mini social media platform for sharing memories with a clean UI."
+      "📷 Memories App – April 2024, A mini social media platform for sharing memories with a clean UI.",
+       "🍅 Tomato – March 25, 2025, A food ordering platform with a real-time admin dashboard for managing products and orders.",
     ],
   },
   {
     review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
     imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
+    logoPath: "/images/free_circ.png",
     title: "👨‍💻 Freelance & Open Source Projects",
     date: "Jan 2024 – Present",
     responsibilities: [
-      "🍅 Tomato – March 25, 2025, A food ordering platform with a real-time admin dashboard for managing products and orders.",
+     
       "☕ HKT Coffee Export – Dec 2024, A client project: responsive front-end built to display and contact coffee exporters",
     ],
   },

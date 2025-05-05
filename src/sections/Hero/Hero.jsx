@@ -48,8 +48,8 @@ const Hero = () => {
               <span className="wave text-7xl inline-block">👋</span>
             </h1>
             <p className='text-white-50 md:text-3xl text-xl font-bold relative flex-wrap md:w-140 z-10'>I'm Fethulmubin a passionate MERN-Stack developer based in Ethiopia  </p>
-            <a href="#project" className='md:w-80 md:h-16 w-60 h-12'>
-              <Button className='md:w-80 md:h-16 w-60 h-12' id='button' text='See my Work' />
+            <a href="/Fethulmubin's_cv.pdf" download className='md:w-80 md:h-16 w-60 h-12'>
+              <Button className='md:w-80 md:h-16 w-60 h-12' id='button' text='Download My CV' />
             </a>
 
           </div>

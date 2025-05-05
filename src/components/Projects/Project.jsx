@@ -17,7 +17,7 @@ const Project = () => {
   const projectRef_4 = useRef(null)
   const projectRef_5 = useRef(null)
   const projectRef_6 = useRef(null)
-  const references = [projectRef_1, projectRef_2]
+  const references = [projectRef_1, projectRef_2, projectRef_3, projectRef_4, projectRef_5, projectRef_6]
 
 
   useGSAP(() => {
@@ -164,7 +164,7 @@ const Project = () => {
   return (
     <section id='project' ref={projectSecRef} className='pb-15 px-3 lg:px-[250px] md:px-[50px]'>
       <div className='flex flex-col items-center'>
-        <span className='px-4 py-2 bg-white-50 text-black-200 rounded-xl text-2xl font-bold'>My Projects</span>
+        <span className='px-4 py-2 mt-6 md:mt-23 bg-white-50 text-black-200 rounded-xl text-2xl font-bold'>My Projects</span>
         <h2 className='text-3xl md:text-5xl lg:text-6xl font-bold mt-4'>Check Out My Latest Projects</h2>
         <p className='md:text-3xl font-semibold text-[18px] my-3'>I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
 
@@ -172,7 +172,7 @@ const Project = () => {
           {
             projects.map((project, index) => (
               <div key={index} ref={project.ref} className='border-2 border-white/50 rounded-2xl '>
-                {project?.imagePath ? <img className='w-full h-[350px] object-contain' src={project.imagePath} alt={project.title} /> : <div className='w-full rounded-t-2xl h-[250px] flex justify-center items-center bg-white-50'>image</div>}
+                {project?.imagePath ? <img className='w-full h-[250px] object-cover' src={project.imagePath} alt={project.title} /> : <div className='w-full rounded-t-2xl h-[250px] flex justify-center items-center bg-white-50'>image</div>}
                 <div className='px-4 flex flex-col '>
                   <h3 className='my-2 text-2xl font-bold'>{project.title}</h3>
                   <p className='mb-1 text-[10px] md:text-[16px]'>{project.date}</p>
