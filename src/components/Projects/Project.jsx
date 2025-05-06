@@ -55,7 +55,7 @@ const Project = () => {
     {
       "title": "Tomato",
       "date": "March 25 2025",
-      "imagePath": "/public/images/tomn.png",
+      "imagePath": "/images/tomn.png",
       "description": "Tomato is an open-source food ordering platform that allows users to browse food items, place orders, and make payments. It features an admin dashboard where administrators can track orders and manage products in real-time. ",
       "technologies": [
         "React",
@@ -73,7 +73,7 @@ const Project = () => {
     {
       "title": "Memories",
       "date": "April 2024",
-      "imagePath": "/public/images/Mem-pc.png",
+      "imagePath": "/images/Mem-pc.png",
       "description": "Memories is small social media application that allows users to share their memories with friends and family. It features a user-friendly interface.",
       "technologies": [
         "React",
@@ -92,7 +92,7 @@ const Project = () => {
     },
     {
       "title": "HKT-coffee-export",
-      "imagePath": "/public/images/buna.png",
+      "imagePath": "/images/buna.png",
       "date": "Dec 2024",
       "description": "HKT-coffee-export was for my private client which is a responsive front-end react project allows users to browse and contact with the seller.",
       "technologies": [
@@ -108,7 +108,7 @@ const Project = () => {
     },
     {
       "title": "Amazon-clone",
-      "imagePath": "/public/images/amazon.png",
+      "imagePath": "/images/amazon.png",
       "date": "Dec 2023",
       "description": "Amazon-clone is a clone of the popular e-commerce platform Amazon. It features a user-friendly, a shopping cart system, and a payment through Stripe.",
       "technologies": [
@@ -125,7 +125,7 @@ const Project = () => {
     },
     {
       "title": "Netflix-clone",
-      "imagePath": "/public/images/netflix.png",
+      "imagePath": "/images/netflix.png",
       "date": "Oct 2023",
       "description": "Netflix-clone is a clone of the popular streaming platform Netflix. It features a user-friendly interface, a movie browsing system, and live trailer feature",
       "technologies": [
@@ -141,7 +141,7 @@ const Project = () => {
     },
     {
       "title": "Evangadi-forum",
-      "imagePath": "/public/images/evangadi.png",
+      "imagePath": "/images/evangadi.png",
       "date": "April 2024",
       "description": "My final project in EVANGAD's 6-month MERN-stack development course. this is EVANGADI's forum which make students ask and answer question tech related topics. ",
       "technologies": [
