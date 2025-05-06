@@ -18,7 +18,7 @@ export default function Bulb() {
     useGSAP(() => {
         ScrollTrigger.create({
             trigger: bulbRef.current,
-            start: "top 20%",
+            start: "top 10%",
             end: "top 40%",
             onEnter: () => setIsBulbOn(true),
             onLeaveBack: () => setIsBulbOn(false),
@@ -30,13 +30,13 @@ export default function Bulb() {
     };
 
     return (
-        <div className="flex flex-col my-25 items-center justify-center h-screen bg-black">
+        <div className="flex flex-col my-30 items-center justify-center h-screen bg-black">
             {/* Bulb Image */}
             <img
                 ref={bulbRef}
                 src={isBulbOn ? bulbOn : bulbOff}
                 alt="Bulb"
-                className={`rounded-full shadow-2xl transition-all duration-500 size-50 ${isBulbOn ? "bg-[#fceb55]  border-[10px] shadow-amber-600 shadow-2xl" : "bg-amber-50/45"} ${isMobile ? "md:w-80 md:h-80 w-60 h-60" : isTablet ? "md:w-80 md:h-80 w-60 h-60" : "w-40 h-40"}`}
+                className={`rounded-full shadow-2xl transition-all duration-500 size-40 ${isBulbOn ? "bg-[#fceb55]  border-[10px] shadow-amber-600 shadow-2xl" : "bg-amber-50/45"} ${isMobile ? "md:w-64 md:h-64 w-48 h-48" : isTablet ? "md:w-80 md:h-80 w-60 h-60" : "w-40 h-40"}`}
             />
 
             {/* String (Wire) */}

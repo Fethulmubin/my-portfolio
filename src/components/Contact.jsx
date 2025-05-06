@@ -1,36 +1,41 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { FaGithub, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import TitleHeader from './TitleHeader';
 import emailjs from '@emailjs/browser'
-import {ToastContainer} from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify';
 
 
 const Contact = () => {
 
+    const [loading, setLoading] = useState(false)
+
     const form = useRef()
     const sendEmail = (e) => {
         e.preventDefault();
+        setLoading(true)
         emailjs
-          .sendForm( 'service_soslj55','template_ae0tn8d', form.current, {
-            publicKey: 'GnxDm1GPkTI3B4KNd',
-          })
-          .then(
-            () => {
-            //   console.log('SUCCESS!');
-              toast.success('Message sent successfully!')
-              form.current.reset()  
-            },
-            (error) => {
-            //   console.log('FAILED...', error);
-            toast.error('Message failed to send!')
-            },
-          );
-      };
+            .sendForm('service_soslj55', 'template_ae0tn8d', form.current, {
+                publicKey: 'GnxDm1GPkTI3B4KNd',
+            })
+            .then(
+                () => {
+                    //   console.log('SUCCESS!');
+                    toast.success('Message sent successfully!')
+                    form.current.reset()
+                    setLoading(false)
+                },
+                (error) => {
+                    //   console.log('FAILED...', error);
+                    toast.error('Message failed to send!')
+                    setLoading(false)
+                },
+            );
+    };
     return (
         <div id="contact" className="w-full flex flex-col items-center mt-20 md:mt-40 section-padding xl:px-0">
-            <ToastContainer position='top-center' autoClose={3000}/>
+            <ToastContainer position='top-center' autoClose={3000} />
             <div className="w-full max-w-4xl px-2 md:px-10">
                 <TitleHeader
                     title="Get in Touch – Let’s Connect"
@@ -82,7 +87,7 @@ const Contact = () => {
                             <button type="submit" className="mt-5">
                                 <div className="cta-button group">
                                     <div className="bg-circle" />
-                                    <p className="text">Send Message</p>
+                                    <p className="text">{loading ? 'Sending...' : 'Send Message'}</p>
                                     <div className="arrow-wrapper">
                                         <img src="/images/arrow-down.svg" alt="arrow" />
                                     </div>
@@ -90,9 +95,15 @@ const Contact = () => {
                             </button>
                         </form>
                         <div className='mt-10 flex justify-center gap-8'>
-                        <FaGithub className="text-3xl text-white hover:text-gray-400 hover:scale-125 cursor-pointer transition duration-300" />
-                        <FaLinkedin className="text-3xl text-white hover:text-gray-400 hover:scale-125 cursor-pointer transition duration-300" />  
-                        <FaTelegramPlane className="text-3xl text-white hover:text-gray-400 transition hover:scale-125 cursor-pointer duration-300" />
+                            <a href="https://github.com/Fethulmubin" target="_blank" rel="noopener noreferrer">
+                                <FaGithub className="text-3xl text-white hover:text-gray-400 hover:scale-125 cursor-pointer transition duration-300" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/fethulmubin/" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin className="text-3xl text-white hover:text-gray-400 hover:scale-125 cursor-pointer transition duration-300" />
+                            </a>
+                            <a href="https://t.me/FETHULM" target="_blank" rel="noopener noreferrer">
+                                <FaTelegramPlane className="text-3xl text-white hover:text-gray-400 hover:scale-125 cursor-pointer transition duration-300" />
+                            </a>
                         </div>
                     </div>
                 </div>

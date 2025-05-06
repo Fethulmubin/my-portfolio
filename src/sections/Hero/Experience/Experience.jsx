@@ -80,12 +80,12 @@ const Experience = () => {
                                 
                                 {/* Right column for content */}
                                 <div className="w-full px-2">
-                                    <h1 className='font-semibold text-3xl'>{card.title}</h1>
+                                    <h1 className='font-semibold text-2xl'>{card.title}</h1>
                                     <p className='my-3 text-white/70'>{card.date}</p>
                                     <p className='text-blue-400'>Responsibilities</p>
                                     <ul className='mt-4 flex flex-col gap-2'>
                                         {card.responsibilities.map((item, i) => (
-                                            <li key={i} className="bg-white/5 px-4 text-[15px] md:text-[20px]  py-2 rounded-lg backdrop-blur-sm">
+                                            <li key={i} className="bg-white/5 px-4 text-[12px] md:text-[16px]  py-2 rounded-lg backdrop-blur-sm">
                                                 {item}
                                             </li>
                                         ))}
