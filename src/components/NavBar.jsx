@@ -10,7 +10,7 @@ const NavBar = () => {
             </a>
 
             <nav className='desktop'>
-                <ul className='flex text-2xl font-semibold gap-10'>
+                <ul className='flex text-xl md:text-2xl font-semibold gap-10'>
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#project">Projects</a></li>
                     <li><a href="#exper">About</a></li>
@@ -19,7 +19,7 @@ const NavBar = () => {
 
             <a href="#contact" className='contact-btn group'>
                 <div className='inner font-semibold '>
-                    <span className='md:py-1'>Contact me</span>
+                    <span className='md:py-1 font-semibold'>Contact me</span>
                 </div>
             </a>
         </div>
